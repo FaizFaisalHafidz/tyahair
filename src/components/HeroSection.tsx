@@ -7,7 +7,6 @@ import VideoBackground from './VideoBackground'
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
   const ctaRef = useRef<HTMLDivElement>(null)
 
@@ -47,10 +46,6 @@ export default function HeroSection() {
     )
 
   }, [])
-
-  const scrollToProducts = () => {
-    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <section className="relative h-screen overflow-hidden">

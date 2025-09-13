@@ -1,5 +1,6 @@
 'use client'
 
+import NextImage from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 interface HeroBackgroundProps {
@@ -57,13 +58,14 @@ export default function HeroBackground({
 
       {/* Image Background */}
       {!videoSrc && imageSrc && !imageError && (
-        <img
+        <NextImage
           src={imageSrc}
-          alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-1000 ${
+          alt={alt || 'Hero background'}
+          fill
+          className={`object-cover transition-opacity duration-1000 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          loading={priority ? 'eager' : 'lazy'}
+          priority={priority}
           onLoad={() => setImageLoaded(true)}
           onError={() => setImageError(true)}
         />

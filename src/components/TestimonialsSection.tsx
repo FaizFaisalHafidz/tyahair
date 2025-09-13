@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
 
                 {/* Comment */}
                 <p className="text-gray-700 mb-6 leading-relaxed text-sm">
-                  "{testimonial.comment}"
+                  &ldquo;{testimonial.comment}&rdquo;
                 </p>
 
                 {/* Profile */}
